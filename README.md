@@ -19,3 +19,7 @@ npm run db:studio
 - API model: lib > actions 
 - API integration: src > app 
 - UI: src > app > components
+
+## Test Cases
+
+https://docs.google.com/spreadsheets/d/19pXteEn3orgn2vR1pjc400211lEpVuWfcAnymkSbfec/edit?gid=0#gid=0
