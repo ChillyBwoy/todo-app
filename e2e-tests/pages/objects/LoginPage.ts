@@ -9,10 +9,14 @@ export class LoginPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.header = page.locator("h1");
+    this.header = page.getByRole("heading", { name: "Sign In" });
     this.loginFormEmail = page.locator("#email");
     this.loginFormPassword = page.locator("#password");
     this.loginFormSubmit = page.locator("button[type=submit]");
+  }
+
+  get url() {
+    return "/login";
   }
 
   async login(username: string, password: string) {
@@ -22,6 +26,6 @@ export class LoginPage {
   }
 
   async navigate() {
-    await this.page.goto("/login");
+    await this.page.goto(this.url);
   }
 }
